@@ -20,11 +20,21 @@ require_once("config.php");
 //$search = Usuario::search("jo");
 //echo json_encode($search);
 
-Carrega um usuario usando o login e a senha
-$usuario = new Usuario();
-$usuario->login("joao","qwerty");
+//Carrega um usuario usando o login e a senha
+//$usuario = new Usuario();
+//$usuario->login("joao","qwerty");
+//echo $usuario;
+
+//Criando um novo usuario
+//$aluno = new Usuario();
+//$aluno->setDeslogin('aluno');
+//$aluno->setDessenha("@lun0");
+//$aluno = new Usuario("aluno","@lun0");
+//$aluno->insert();
+//echo $aluno;
+
+$usuario = new usuario();
+$usuario->loadById(8);
+$usuario->update("professor","!@#$%&/()=?*");
 echo $usuario;
-
-
-
 ?>
